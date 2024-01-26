@@ -1,18 +1,28 @@
 import express from "express";
-// import mongoose from "mongoose";
-// import dotenv from "dotenv";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 // import userRouter from "./routes/user-routes.js";
  
-// dotenv.config();
+dotenv.config();
  
 
 const app = express();
 
- app.use("/",(req,res,next)=>{
-    console.log("server started");
-    res.send("hi");
+app.use(express.json());
+
+// app.use("/user",userRouter)
+
+mongoose
+ .connect(
+   `mongodb+srv://admin:${process.env.MONGODB_PASSWORD}@cluster0.jrgb2no.mongodb.net/?retryWrites=true&w=majority`
+ )
+ .then(() => {
+   console.log("database connnected");
+   app.listen(5000, () => {
+     console.log("app is running");
+     
+   });
  })
-app.listen(5000, () => {
-         console.log("app is running");
-        
-     });
+ .catch((error) => {
+   console.log(error);
+ });
