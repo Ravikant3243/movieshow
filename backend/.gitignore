@@ -1,6 +1,5 @@
 /routes/
 /controllers/
-/models/
 /node_modules/
 .env
 
