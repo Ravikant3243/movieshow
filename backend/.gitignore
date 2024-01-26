@@ -1,0 +1,27 @@
+/routes/
+/controllers/
+/models/
+/node_modules/
+.env
+
+
+
+
+
+# app.use(express.json());
+#  app.use("/user",userRouter)
+ 
+# mongoose
+#   .connect(
+#     `mongodb+srv://admin:${process.env.MONGODB_PASSWORD}@cluster0.jrgb2no.mongodb.net/?retryWrites=true&w=majority`
+#   )
+#   .then(() => {
+#     console.log("database connnected");
+#     app.listen(5000, () => {
+#       console.log("app is running");
+      
+#     });
+#   })
+#   .catch((error) => {
+#     console.log(error);
+#   });
