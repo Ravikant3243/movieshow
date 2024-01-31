@@ -20,4 +20,5 @@
     ],
   });
 
-   export default mongoose.model('Admin',AdminShema);
+const Admin= mongoose.model('Admin',AdminShema);
+ export default Admin;

@@ -25,7 +25,7 @@
             const hashedPassword=bcrypt.hashSync(password);
            try {
                  user=new User({name,email,password:hashedPassword});
-                 await user.save();
+                user= await user.save();
            } catch (error) {
              return console.log(error);
            }
